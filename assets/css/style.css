@@ -6,7 +6,8 @@
 }
 
 html{
-    font-family: Helvetica;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 /* 
 1. Từ ngoài vào trong
@@ -24,7 +25,6 @@ html{
 /* Common CSS */
 .clear {
     clear: both;
-    
 }
 
 .text-white {
@@ -40,17 +40,58 @@ html{
     margin-right: -8px;
 }
 
-.column {
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
     float: left;
     padding-left: 8px;
     padding-right: 8px;
 }
 
-.column-haft {
+.col-full {
+    width: 100%;
+}
+
+.col-half {
     width: calc(100% / 2);
 }
-.column-third {
+
+.col-third {
     width: calc(100% / 3);
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    cursor: pointer;
 }
 /* Main CSS */
 #main {
@@ -179,7 +220,7 @@ html{
 
 #contain .content-section {
     width: 800px;
-    padding: 64px 0px;
+    padding: 64px 0px 112px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -264,7 +305,6 @@ html{
 /* Places */
 .places-list {
     margin-top: 32px;
-    margin-bottom: 48px;
 }
 
 .place-img {
@@ -292,23 +332,6 @@ html{
 .place-desc {
     margin-top: 15px;
     line-height: 1.4;
-}
-.place-buy-btn {
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
-    border: none;
-}
-.place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
 }
 
 .modal {
@@ -439,7 +462,67 @@ button.close {
         transform: translateY(0);
     }
 }
+
+/* Contact form*/
+.content-section .section-heading {
+    display: block;
+    margin-top: 10px;
+}
+.contact-content {
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="fa-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form .form-control{
+    font-size: 15px;
+    padding: 10px ;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Map Section */
+.map-section img {
+    width: 100%;
+    height: auto;
+}
 /* Footer Section */
 #footer {
-
+    background-color: #fff;
+    box-sizing: border-box;
+    display: block;
+    padding: 64px 16px;
+    text-align: center;
+    list-style: none;
+    line-height: 36px;
 }
+
+#footer .social-list a {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 2px;
+    text-decoration: none;
+}
+
+#footer .social-list a:hover {
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 2px;
+    text-decoration: none;
+}
+#footer .copy-right{
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copy-right a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
