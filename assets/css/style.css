@@ -95,7 +95,7 @@ html{
 }
 /* Main CSS */
 #main {
-
+    overflow: hidden;
 }
 
 #header {
@@ -171,6 +171,14 @@ html{
     background-color: #ccc;
 }
 
+#header .moblie-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .moblie-menu-btn,
 #header .search-btn{
     float: right;
     padding: 0 21px;
@@ -181,6 +189,16 @@ html{
     cursor: pointer;
 }
 
+#header .moblie-menu-btn:hover .menu-icon {
+    color: #000 !important;
+}
+
+#header .moblie-menu-btn:hover{
+    background-color: #ccc!important;
+    justify-content: center;
+}
+
+#header .menu-icon,
 #header .search-icon{
     color: #fff;
     font-size: 14px;
@@ -220,9 +238,12 @@ html{
 
 #contain .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0px 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #contain .section-heading{

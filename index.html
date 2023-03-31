@@ -7,6 +7,7 @@
     <title>The Band</title>
     <link rel="icon" href="./img/icon/fontawesome-free-6.4.0-web/svgs/brands/soundcloud.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/responsive.css"/>
     <link rel="stylesheet" href="./img/icon/themify-icons/themify-icons.css"/>
     <link rel="stylesheet" href="./img/icon/fontawesome-free-6.4.0-web/css/all.css"/>
 </head>
@@ -20,7 +21,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="#">
+                    <a href="#more">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -32,6 +33,10 @@
                 </li>
             </ul>
             <!-- End: NAV  -->
+            <!-- Mobile Menu button -->
+            <div id= "mobile-menu" class="moblie-menu-btn">
+                <i class="menu-icon fa-solid fa-bars"></i>
+            </div>
             <!-- Begin: Search Button  -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
@@ -235,6 +240,43 @@
         modalContainer.addEventListener('click', function(event) {
             event.stopPropagation()
         })
+    </script>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+
+        // Đóng / mở moblie menu
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+            // console.log(header.clientHeight);
+        }
+
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav > li a[href*="#"]');
+        for (var i=0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            // var menuItemSuv = menuItemsSubnav[i];
+            
+            // neu the a do co submenu con ben trong va submenu do co class la subnav
+            menuItem.onclick = function() {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParentMenu) {
+                    // bo qua # mac dinh cua the a cha
+                    event.preventDefault();
+                }
+                else {
+                    header.style.height = null;
+                }
+            }
+        }
     </script>
 </body>
 </html>
