@@ -2,12 +2,90 @@
 @media (min-width: 1024px) {
     
 }
+/* PC & TABLET */
+@media (max-width: 1023px) {
+    .m-mt-8 {
+        margin-top: 8px !important;
+    }
+    #header {
+        height: 46px;
+    }
+
+    .btn {
+        padding: 15px 16px;
+        width: 100%;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+    }
+    
+    .modal-footer .red-close {
+        padding: 16px;
+    }
+
+    .modal-close {
+        padding: 16px 16px;
+    }
+
+    .modal-input {
+        padding: 16px;
+    }
+
+    .modal-label {
+        font-size: 16px;
+    }
+
+    .contact-info {
+        line-height: 2.2;
+    }
+
+    #footer .social-list a {
+        font-size: 32px;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    #footer .copy-right {
+        font-size: 18px;
+    }
+    #footer .copy-right a {
+        padding: 12px 0;
+        display: inline-block;
+    }
+}
 /* TABLET */
 @media (min-width: 740px) and (max-width: 1023px) {
-    
+
+    .contact-info {
+        line-height: 2;
+    }
+
+    #footer .social-list a {
+        font-size: 32px;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    #footer .copy-right {
+        font-size: 18px;
+    }
+    #footer .copy-right a {
+        padding: 12px 0;
+        display: inline-block;
+    }
 }
 /* MOBILE */
 @media (max-width: 740px) {
+    .s-full-width,
+    .s-coll-full {
+        width: 100% !important;
+    }
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+    .s-mt-16 {
+        margin-top: 16px !important;
+    }
 
     #header {
         overflow: hidden;
@@ -56,5 +134,26 @@
     #nav .subnav a {
         color: #fff;
         padding: 5px 41px;
+    }
+
+    #contain .member-img {
+        width: 60%;
+    }
+    .contact-form {
+        margin-top: 32px;
+    }
+
+    #footer .social-list a {
+        font-size: 32px;
+        padding: 4px;
+        text-decoration: none;
+    }
+
+    #footer .copy-right {
+        font-size: 18px;
+    }
+    #footer .copy-right a {
+        padding: 12px 0;
+        display: inline-block;
     }
 }
