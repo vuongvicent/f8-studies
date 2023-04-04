@@ -1,9 +1,9 @@
-/* PC */
-@media (min-width: 1024px) {
+/* PC 1024px = 64em */
+@media (min-width: 64em) {
     
 }
-/* PC & TABLET */
-@media (max-width: 1023px) {
+/* PC & TABLET 1023px = 63.9375em */
+@media (max-width: 63.9375em) {
     .m-mt-8 {
         margin-top: 8px !important;
     }
@@ -15,8 +15,14 @@
         padding: 15px 16px;
         width: 100%;
     }
+
+    .m-ticket-btn,
+    .contact-submit-btn {
+        font-size: 16px;
+    }
     .contact-form .form-control {
         padding: 15px;
+        font-size: 16px;
     }
     
     .modal-footer .red-close {
@@ -46,15 +52,15 @@
     }
 
     #footer .copy-right {
-        font-size: 18px;
+        font-size: 16px;
     }
     #footer .copy-right a {
         padding: 12px 0;
         display: inline-block;
     }
 }
-/* TABLET */
-@media (min-width: 740px) and (max-width: 1023px) {
+/* TABLET 740px = 46.25em; 1023px = 63.9375em */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
 
     .contact-info {
         line-height: 2;
@@ -67,7 +73,7 @@
     }
 
     #footer .copy-right {
-        font-size: 18px;
+        font-size: 16px;
     }
     #footer .copy-right a {
         padding: 12px 0;
@@ -75,7 +81,8 @@
     }
 }
 /* MOBILE */
-@media (max-width: 740px) {
+/* 739 Là break point giữa pc và mobile 739px =  46.1875em*/
+@media (max-width: 46.1875em) { 
     .s-full-width,
     .s-coll-full {
         width: 100% !important;
@@ -135,7 +142,10 @@
         color: #fff;
         padding: 5px 41px;
     }
-
+    /* Ẩn content trên silder khi hiển thị trên mobile */
+    #slider .text-heading, #slider .text-discription {
+        display: none;
+    }
     #contain .member-img {
         width: 60%;
     }
@@ -144,13 +154,13 @@
     }
 
     #footer .social-list a {
-        font-size: 32px;
+        font-size: 28px;
         padding: 4px;
         text-decoration: none;
     }
 
     #footer .copy-right {
-        font-size: 18px;
+        font-size: 16px;
     }
     #footer .copy-right a {
         padding: 12px 0;

@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band</title>
-    <link rel="icon" href="./img/icon/fontawesome-free-6.4.0-web/svgs/brands/soundcloud.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-    <link rel="stylesheet" href="./assets/css/responsive.css"/>
-    <link rel="stylesheet" href="./img/icon/themify-icons/themify-icons.css"/>
-    <link rel="stylesheet" href="./img/icon/fontawesome-free-6.4.0-web/css/all.css"/>
+    <link rel="icon" href="../assets/img/icon/fontawesome-free-6.4.0-web/svgs/brands/soundcloud.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="../assets/css/responsive.css"/>
+    <link rel="stylesheet" href="../assets/img/icon/themify-icons/themify-icons.css"/>
+    <link rel="stylesheet" href="../assets/img/icon/fontawesome-free-6.4.0-web/css/all.css"/>
 </head>
 <body>
     <div id="main">
@@ -46,9 +46,20 @@
 
         <!-- Slider  -->
         <div id="slider">
-            <div class="text-content">
+            <div class="slider-content">
+                <img src="/assets/img/slider/la.jpg" class="slider-img"/>
+                <h2 class="text-heading">Los Angeles</h2>
+                <div class="text-discription">We had the best time playing at Venice Beach!</div>
+            </div>
+            <div class="slider-content">
+                <img src="/assets/img/slider/ny.jpg" class="slider-img"/>
                 <h2 class="text-heading">New York</h2>
                 <div class="text-discription">The atmosphere in New York is lorem ipsum.</div>
+            </div>
+            <div class="slider-content">
+                <img src="/assets/img/slider/chicago.jpg" class="slider-img"/>
+                <h2 class="text-heading">Chicago</h2>
+                <div class="text-discription">Thank you, Chicago - A night we won't forget.</div>
             </div>
         </div>
 
@@ -65,15 +76,15 @@
                 <div class="row member-list">
                     <div class="col col-third text-center s-coll-full mt-32">
                         <p class="member-name">Name</p>
-                        <img src="./img/band/bandmember.jpg" alt="Name" class="member-img"></img>
+                        <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-img"></img>
                     </div>
                     <div class="col col-third text-center s-coll-full mt-32">
                         <p class="member-name">Name</p>
-                        <img src="./img/band/bandmember.jpg" alt="Name" class="member-img"></img>
+                        <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-img"></img>
                     </div>
                     <div class="col col-third text-center s-coll-full mt-32">
                         <p class="member-name">Name</p>
-                        <img src="./img/band/bandmember.jpg" alt="Name" class="member-img"></img>
+                        <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-img"></img>
                     </div>
                 </div>
             </div>
@@ -95,7 +106,7 @@
                     <!-- Places -->
                     <div class= "row places-list">
                         <div class="col col-third mt-16 s-coll-full">
-                            <img src="./img/place/newyork.jpg" alt="new york" class="place-img">
+                            <img src="./assets//img/place/newyork.jpg" alt="new york" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
@@ -104,7 +115,7 @@
                             </div>
                         </div>
                         <div class="col col-third mt-16 s-coll-full">
-                            <img src="./img/place/paris.jpg" alt="paris" class="place-img">
+                            <img src="./assets/img/place/paris.jpg" alt="paris" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
@@ -113,15 +124,15 @@
                             </div>
                         </div>
                         <div class="col col-third mt-16 s-coll-full">
-                            <img src="./img/place/sanfran.jpg" alt="san francisco" class="place-img">
+                            <img src="./assets/img/place/sanfran.jpg" alt="san francisco" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button>
+                                <button href="#" class="m-ticket-btn btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
-                    </div>placeholder
+                    </div>
                 </div>
             </div>
         </div>
@@ -151,14 +162,14 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn pull-right mt-16 s-full-width" type="submit" value="SEND">
+                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
             </div>
                 <!-- End: Section CONTACT -->
                 <div class="map-section">
-                    <img src="./img/map/map.jpg" alt="Map">
+                    <img src="./assets/img/map/map.jpg" alt="Map">
                 </div>
         </div>
 
@@ -240,6 +251,8 @@
             event.stopPropagation()
         })
     </script>
+
+    <!-- JS Menu Header -->
     <script>
         var header = document.getElementById('header');
         var mobileMenu = document.getElementById('mobile-menu');
@@ -275,6 +288,33 @@
                     header.style.height = null;
                 }
             }
+        }
+    </script>
+
+    <!-- JS Slider Auto Images  -->
+    <script>
+        // Khởi tạo giá trị đầu vào cho vị trí slider
+        let slideIndex = 0;
+        // Tạo hàm slider
+        showSlides();
+        // chạy hàm showslides với điều kiện bên trong
+        function showSlides() {
+            // Khởi tạo biến i
+            let i;
+            // Khởi tạo slides lấy ra class name "slider-content" và gán chúng vào biến slides
+            let slides = document.getElementsByClassName("slider-content");
+            // Lặp qua độ dài từng slides và gán display = "none"
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            };
+            // Tăng vị trí slideIndex lên 1 đơn vị
+            slideIndex++ ;
+            // Nếu độ dài vị trí lớn hơn độ dài của slide set lại slideIndex = 1
+            if (slideIndex > slides.length) {slideIndex = 1};
+            // Hiển thị lại display bằng "block" từ phần từ slides đầu tiên
+            slides[slideIndex -1].style.display = "block";
+            // Thời gian chạy 1 slide là 4s
+            setTimeout(showSlides, 4000);
         }
     </script>
 </body>

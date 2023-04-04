@@ -9,6 +9,9 @@ html{
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
+img{
+    vertical-align: middle;
+}
 /* 
 1. Từ ngoài vào trong
 2. Trên xuống dưới
@@ -88,6 +91,8 @@ html{
     margin-top: 15px;
     border: none;
     text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
 }
 .btn:hover {
     color: #000;
@@ -213,28 +218,38 @@ html{
 #slider {
     position: relative;
     margin-top: 46px;
-    padding-top: 50%;
-    background: url('/img/slider/chicago.jpg') top center / cover no-repeat;
 }
 
-#slider .text-content {
-    position: absolute;
-    color: white;
-    bottom: 47px;
-    /* left: 50%;
-    transform: translateX(-50%); */
+.slider-img {
     width: 100%;
-    text-align: center;
+    flex: 1 0 100%;
+    overflow: hidden;
+}
+
+#slider .slider-content {
+    display: block;
 }
 
 #slider .text-heading {
-    font-weight: 500;
+    color: white;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    bottom: 47px;
+    padding: 40px;
+    font-weight: 400;
     font-size: 24px;
 }
 
 #slider .text-discription {
+    color: white;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
     font-size: 15px;
-    margin-top: 25px;
+    font-weight: bold;
+    text-shadow: 2 1 1px #000;
+    text-align: center;
 }
 
 #contain {
